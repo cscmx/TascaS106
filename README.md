@@ -6,7 +6,8 @@ Descripción:
     Formulario HTML 
     Archivo action.php  
     SUPERGLOBALS
-    VARIABLES $_SESSION
+    Variables $_SESSION
+    Métodos mágicos
 
 
 Tecnología: 
