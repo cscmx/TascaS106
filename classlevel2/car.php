@@ -7,16 +7,25 @@ trait Turbo
     }
 }
 
+//PROBANDO ENUMS
+enum Fuel 
+{
+    case Gasoline;
+    case Diesel;
+    case Electric;
+}
+
 class Car
 {
     use Turbo;
 
     protected string $brand;
     protected string $licensePlate;
-    protected string $typeFuel;
+    protected Fuel $typeFuel;
     protected int $maxSpeed;
 
-    public function __construct(string $brand, string $licensePlate, string $typeFuel, int $maxSpeed) 
+    
+    public function __construct(string $brand, string $licensePlate,Fuel $typeFuel, int $maxSpeed) 
     {
         $this->brand = $brand;
         $this->licensePlate = $licensePlate;
@@ -26,7 +35,7 @@ class Car
 
     public function __toString(): string
     {
-        return $this->brand. ", ". $this->licensePlate. ", ". $this->typeFuel . ", ". $this->maxSpeed.PHP_EOL;
+        return $this->brand. ", ". $this->licensePlate. ", ". $this->typeFuel->name. ", ". $this->maxSpeed.PHP_EOL;
     }
 
     public function __invoke()

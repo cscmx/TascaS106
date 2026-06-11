@@ -4,7 +4,7 @@ Implementa una classe Car que tingui informació sobre un cotxe (marca, matrícu
 */
 require_once 'classlevel2/car.php';
 
-$car1 = new Car("Mercedes", "4556 DCH", "gasolina", 195);
+$car1 = new Car("Mercedes", "4556 DCH", Fuel::Gasoline, 195);
 
 $car1->boost();
 
